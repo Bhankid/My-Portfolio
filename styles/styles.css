@@ -377,7 +377,13 @@ section {
   0% {
     transform: scaleY(1);
   }
+  25% {
+    transform: scaleY(1.2);
+  }
   50% {
+    transform: scaleY(1.6);
+  }
+  75% {
     transform: scaleY(1.4);
   }
   100% {
