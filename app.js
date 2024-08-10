@@ -22,7 +22,7 @@ let conversation = [];
 
 // OpenAI API settings
 const apiEndpoint =
-  "https://api.openai.com/v1/engines/davinci-codex/completions"; // Ensure you are using the correct engine
+  "https://api.openai.com/v1/engines/davinci-codex/completions"; 
 const apiKey =
   "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";
 
@@ -110,7 +110,7 @@ contactForm.addEventListener("submit", (e) => {
     (response) => {
       console.log("SUCCESS!", response.status, response.text);
       alert("Message sent successfully!");
-      // Optionally, you can clear the form fields after success
+      //Clear the form fields after success
       contactForm.reset();
     },
     (error) => {
