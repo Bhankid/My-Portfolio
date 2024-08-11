@@ -6,6 +6,7 @@
 }
 
 :root {
+  --primary-color: #f7dc6f;
   --color-primary: #191d2b;
   --color-secondary: #ee1c1c;
   --color-white: #ffffff;
@@ -178,7 +179,6 @@ section {
   color: var(--color-grey-2);
   pointer-events: none;
 }
-
 
 .header-content {
   display: grid;
@@ -464,6 +464,9 @@ section {
   margin-top: 35px;
   padding: 2rem 0;
   text-align: center;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .portfolios {
@@ -589,9 +592,27 @@ section {
   padding-bottom: 1rem;
 }
 
+.read {
+  color: var(--primary-color);
+  transition: color 0.5s ease-in-out;
+}
+
+.read:hover {
+  color: var(--color-secondary);
+}
+
+.read:active {
+  color: var(--color-grey-2);
+}
+
 .contact-content-con {
   display: flex;
   padding-top: 3.5rem;
+}
+
+#contact .bg-text {
+  font-size: 6rem;
+  padding-bottom: 75px;
 }
 .contact-content-con .left-contact {
   flex: 2;
@@ -789,7 +810,7 @@ section {
     margin: 0 auto;
   }
   .right-header .name {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     text-align: center;
     padding-top: 3rem;
   }
@@ -960,6 +981,38 @@ footer {
   .portfolios {
     grid-template-columns: repeat(1, 1fr);
   }
+
+    .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 2rem;
+  }
+
+    .left-header {
+    perspective: none;
+  }
+
+  .image__hero {
+    transform: none;
+    transition: none;
+  }
+
+  .image__hero:hover {
+    transform: none;
+  }
+
+  .image__hero img {
+    filter: none;
+    transition: none;
+  }
+
+  .image__hero:hover img {
+    filter: none;
+  }
 }
 @media screen and (max-width: 1070px) {
   .about-container {
@@ -976,7 +1029,7 @@ footer {
     font-size: 4rem;
   }
   .main-title h2 .bg-text {
-    font-size: 4.5rem;
+    font-size: 6rem;
   }
 }
 @media screen and (max-width: 970px) {
@@ -1031,14 +1084,37 @@ footer {
   }
 
   .main-title h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .main-title h2 span {
     font-size: 3rem;
   }
   .main-title h2 .bg-text {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
+
+    .left-header {
+    perspective: none;
+  }
+
+  .image__hero {
+    transform: none;
+    transition: none;
+  }
+
+  .image__hero:hover {
+    transform: none;
+  }
+
+  .image__hero img {
+    filter: none;
+    transition: none;
+  }
+
+  .image__hero:hover img {
+    filter: none;
+  }
+
 }
 
 .chat--tt {
