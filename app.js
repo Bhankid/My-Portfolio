@@ -22,7 +22,7 @@ let conversation = [];
 
 // OpenAI API settings
 const apiEndpoint =
-  "https://api.openai.com/v1/engines/davinci-codex/completions"; 
+  "https://api.openai.com/v1/engines/davinci-codex/completions";
 const apiKey =
   "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";
 
@@ -74,51 +74,34 @@ function fetchOpenAIResponse(prompt) {
       );
     });
 }
-/*
-// Contact form submission handling
-const contactForm = document.querySelector("#contact-form");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Message sent successfully!");
-  // Your form submission logic here
-});
-*/
 
-// Initialize EmailJS with user ID
-emailjs.init(userID);
+// const form = document.getElementById("contact-form");
 
-// Contact form submission handling
-const contactForm = document.querySelector("#contact-form");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// form.addEventListener("submit", async (e) => {
+//   e.preventDefault();
 
-  // Get form data
-  const formData = new FormData(contactForm);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+//   try {
+//     const response = await fetch(form.action, {
+//       method: form.method,
+//       body: new FormData(form),
+//     });
+//     const data = await response.json();
 
-  // Set up EmailJS template parameters
-  const templateParams = {
-    name,
-    email,
-    message,
-  };
+//     if (data.success) {
+//       form.reset();
+//       addMessage("Message sent successfully!", "assistant");
+//     }
+//   } catch (error) {
+//     console.error(error);
+//   }
+// });
 
-  // Send email using EmailJS
-  emailjs.send(serviceID, templateID, templateParams).then(
-    (response) => {
-      console.log("SUCCESS!", response.status, response.text);
-      alert("Message sent successfully!");
-      //Clear the form fields after success
-      contactForm.reset();
-    },
-    (error) => {
-      console.log("FAILED...", error);
-      alert("Error sending message. Please try again.");
-    }
-  );
-});
+// const form = document.getElementById("contact-form");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   form.reset();
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const currentYear = new Date().getFullYear();
