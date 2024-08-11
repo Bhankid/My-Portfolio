@@ -23,16 +23,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-    ></script>
-    <script>
-      (function () {
-        emailjs.init("Bhankid");
-      })();
-    </script>
   </head>
   <body class="main-content">
     <header class="container header active" id="home">
@@ -41,6 +31,10 @@
           <div class="h-shape"></div>
           <div class="image__hero">
             <img src="img/HeroDark.jpg" alt="" />
+
+            <div class="ripple-1"></div>
+            <div class="ripple-2"></div>
+            <div class="ripple-3"></div>
           </div>
         </div>
         <div class="right-header">
@@ -49,14 +43,30 @@
               >.</span
             >
           </h1>
-          <p>
-            As a passionate Software Engineering student & intern at Fleet Labs,
-            based in vibrant Accra, Ghana, I bring a blend of creativity,
-            technical proficiency, and a keen eye for detail to every project I
-            undertake. My journey in the tech world began with a fascination for
-            how technology could solve real-world problems, leading me to pursue
-            a career in software development.
-          </p>
+          <details>
+            <summary>Read More</summary>
+            <p class="bio">
+              <span class="typing-text"
+                >Software Engineer | Based in Accra, Ghana 🌍
+              </span>
+              <span class="typing-text"
+                >👨‍💻 Crafting digital solutions with a touch of magic! ✨ .</span
+              >
+              <span class="typing-text"
+                >🌐 Web Dev | 💻 Desktop Apps | 📱 Android
+              </span>
+              <span class="typing-text"
+                >🔍 Solving problems one line of code at a time. 💡
+              </span>
+              <span class="typing-text"
+                >🌟 Passionate about clean code, elegant designs, and
+                user-friendly experiences.
+              </span>
+              <span class="typing-text"
+                >🎯 Let’s build something amazing together! 🤝
+              </span>
+            </p>
+          </details>
           <div class="btn-con">
             <a href="img/Alfred Fianyo's CV.pdf" class="main-btn">
               <span class="btn-text">Download CV</span>
@@ -75,14 +85,14 @@
           <div class="left-about">
             <h4>Information About me</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              labore nihil obcaecati consequatur. Debitis error doloremque, vero
-              eos vel nemo eius voluptatem dicta tenetur modi. <br />
+              As a passionate Software Engineering student & intern at Fleet
+              Labs, based in Accra, Ghana, I bring a blend of creativity,
+              technical proficiency, and a keen eye for detail to every project
+              I undertake. <br />
               <br />
-              La musica delectus dolore fugiat exercitationem a, ipsum quidem
-              quo enim natus accusamus labore dolores nam. Unde. Lorem ipsum
-              dolor sit amet consectetur, adipisicing elit. Harum non
-              necessitatibus deleniti eum soluta.
+              My journey in the tech world began with a fascination for how
+              technology could solve real-world problems, leading me to pursue a
+              career in software Engineering.
             </p>
             <div class="btn-con">
               <a href="#" class="main-btn">
@@ -734,17 +744,42 @@
               </div>
             </div>
             <div class="right-contact">
-              <form id="contact-form" class="contact-form">
+              <form
+                id="contact-form"
+                class="contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
                 <div class="input-control i-c-2">
-                  <input type="text" required placeholder="YOUR NAME" />
-                  <input type="email" required placeholder="YOUR EMAIL" />
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="a97c9803-813e-4dd2-a307-d71c02dc2371"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="YOUR NAME"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="YOUR EMAIL"
+                  />
                 </div>
                 <div class="input-control">
-                  <input type="text" required placeholder="ENTER SUBJECT" />
+                  <input
+                    type="text"
+                    name="message"
+                    required
+                    placeholder="ENTER SUBJECT"
+                  />
                 </div>
-                <div class="input-control">
+                <div class="input-control" name="message">
                   <textarea
-                    name=""
+                    name="message"
                     id=""
                     cols="15"
                     rows="8"
@@ -789,7 +824,6 @@
     <footer>
       <p>&copy; 2024 All Rights Reserved by <span>Alfred Fianyo</span>.</p>
     </footer>
-
     <script src="app.js" defer></script>
   </body>
 </html>
