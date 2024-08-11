@@ -52,6 +52,8 @@ a {
   font-family: inherit;
 }
 
+
+
 details > summary {
   cursor: pointer;
   padding: 2rem;
@@ -61,7 +63,7 @@ details > summary {
 }
 
 details > summary:hover {
-  padding: 1.25rem; 
+  padding: 1.25rem;
   color: var(--color-secondary);
   transition: all 1s ease-in-out;
 }
@@ -142,7 +144,7 @@ details > summary * {
     background-clip: text;
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     background: none;
@@ -181,10 +183,23 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   filter: grayscale(100%);
   transition: filter 1s ease-in-out;
+  animation: bounce 1s infinite ease-in-out;
 }
 
 .image__hero:hover img {
   filter: grayscale(0);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 section {
@@ -270,7 +285,7 @@ section {
   transition: all 0.5s ease-in-out;
 }
 .theme-btn:active {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 .theme-btn i {
   font-size: 1.4rem;
@@ -431,6 +446,15 @@ section {
   animation: pulse 2s infinite;
   outline: none;
   border-radius: 2px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.about-stats .progress-bars .progress-bar:hover .progress-con .progress span {
+  transform: translateY(-5px); 
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress:not(:hover) {
+  transform: translateY(5px); 
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress span {
@@ -460,6 +484,27 @@ section {
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .python {
   width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .TS {
+  width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .SCSS {
+  width: 78%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .SQL {
+  width: 83%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .jq {
+  width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .bt {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .tw {
+  width: 84%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .jv {
+  width: 82%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress:hover {
@@ -709,8 +754,9 @@ section {
 }
 
 #contact .bg-text {
-  font-size: 6rem;
+  font-size: 7rem;
   padding-bottom: 75px;
+  z-index: -1;
 }
 .contact-content-con .left-contact {
   flex: 2;

@@ -103,6 +103,45 @@ function fetchOpenAIResponse(prompt) {
 //   form.reset();
 // });
 
+// Get the h1 element
+const h1 = document.querySelector('.name');
+
+// Create a function to type out the text
+function typeText(element) {
+  // Get the text content of the element
+  const text = element.textContent;
+
+  // Empty the element
+  element.textContent = '';
+
+  // Create a virtual cursor
+  let cursor = 0;
+
+  // Function to type out the text
+  function type() {
+    // If the cursor is less than the text length, add the next character
+    if (cursor < text.length) {
+      element.textContent += text[cursor];
+      cursor++;
+      setTimeout(type, 100);
+    } else {
+      // If the element has child elements, type out their text content
+      if (element.children.length > 0) {
+        for (let i = 0; i < element.children.length; i++) {
+          typeText(element.children[i]);
+        }
+      }
+    }
+  }
+
+  // Start typing
+  type();
+}
+
+// Call the typeText function when the document loads
+document.addEventListener('DOMContentLoaded', () => {
+  typeText(h1);
+});
 document.addEventListener("DOMContentLoaded", function () {
   const currentYear = new Date().getFullYear();
   const footer = document.querySelector("footer p");

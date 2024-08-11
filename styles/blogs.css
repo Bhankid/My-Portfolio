@@ -52,6 +52,31 @@ a {
   font-family: inherit;
 }
 
+.main-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+
+.main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey-5);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, calc(-50% + 1rem));
+  font-weight: 800;
+  font-size: 5.2rem;
+}
 .blogs {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -72,7 +97,7 @@ a {
 .blogs .blog:hover {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .blogs .blog:hover img {
   filter: grayscale(0);
@@ -108,6 +133,83 @@ a {
   padding-bottom: 1rem;
 }
 
+/* Large screens (Desktops) */
+@media only screen and (min-width: 1400px) {
+  .main-title h2 {
+    font-size: 5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 6.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .blogs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .blogs .blog {
+    padding: 40px;
+  }
+  .blogs .blog img {
+    height: 350px;
+  }
+}
+
+/* Medium screens (Laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1340px) {
+  .main-title h2 {
+    font-size: 4.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 6rem;
+  }
+  .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blogs .blog {
+    padding: 35px;
+  }
+  .blogs .blog img {
+    height: 300px;
+  }
+}
+
+/* Small screens (Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-title h2 {
+    font-size: 4rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 5.2rem;
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blogs .blog {
+    padding: 30px;
+  }
+  .blogs .blog img {
+    height: 250px;
+  }
+}
+
+/* Extra small screens (Mobiles) */
+@media only screen and (max-width: 767px) {
+  .main-title h2 {
+    font-size: 3.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 5rem;
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blogs .blog {
+    padding: 25px;
+  }
+  .blogs .blog img {
+    height: 200px;
+  }
+}
 /* .read {
   color: var(--primary-color);
   transition: background-color 0.2s ease-in-out;
