@@ -142,6 +142,7 @@ function typeText(element) {
 document.addEventListener('DOMContentLoaded', () => {
   typeText(h1);
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const currentYear = new Date().getFullYear();
   const footer = document.querySelector("footer p");

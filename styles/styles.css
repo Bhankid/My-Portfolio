@@ -42,6 +42,7 @@ body {
   font-size: 1.1rem;
   color: var(--color-white);
   scroll-behavior: smooth;
+  box-sizing: border-box;
   transition: all 2s ease-in;
 }
 
@@ -51,8 +52,6 @@ a {
   color: inherit;
   font-family: inherit;
 }
-
-
 
 details > summary {
   cursor: pointer;
@@ -183,7 +182,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   filter: grayscale(100%);
   transition: filter 1s ease-in-out;
-  animation: bounce 1s infinite ease-in-out;
+  animation: bounce 1.5s infinite ease-in-out;
 }
 
 .image__hero:hover img {
@@ -208,7 +207,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
+  padding: 3rem 15rem;
 }
 
 .container {
@@ -304,8 +303,8 @@ section {
   position: relative;
 }
 .header-content .left-header .h-shape {
-  transition: all 0.4s ease-in-out;
-  width: 65%;
+  transition: all 0.5s ease-in-out;
+  width: 60%;
   height: 100%;
   background-color: var(--color-secondary);
   position: absolute;
@@ -318,15 +317,15 @@ section {
   border-radius: var(--br-sm-2);
   height: 90%;
   width: 68%;
-  margin-left: 4rem;
+  margin-left: 3.5rem;
   background-color: var(--color-black);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .header-content .left-header .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   filter: grayscale(100%);
 }
 .header-content .left-header .image img:hover {
@@ -336,17 +335,17 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 18rem;
+  padding-right: 15rem;
 }
 .header-content .right-header .name {
-  font-size: 3rem;
+  font-size: 3.3rem;
 }
 .header-content .right-header .name span {
   color: var(--color-secondary);
 }
 .header-content .right-header p {
-  margin: 1.5rem 0;
-  line-height: 2rem;
+  margin: 1.3rem 0;
+  line-height: 1.7rem;
 }
 
 /*About*/
@@ -450,11 +449,11 @@ section {
 }
 
 .about-stats .progress-bars .progress-bar:hover .progress-con .progress span {
-  transform: translateY(-5px); 
+  transform: translateY(-5px);
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress:not(:hover) {
-  transform: translateY(5px); 
+  transform: translateY(5px);
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress span {
@@ -906,8 +905,8 @@ section {
 .main-title h2 {
   position: relative;
   text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 800;
 }
 .main-title h2 span {
   color: var(--color-secondary);
@@ -917,11 +916,11 @@ section {
   top: 50%;
   left: 50%;
   color: var(--color-grey-5);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: -1;
   transform: translate(-50%, -50%);
   font-weight: 800;
-  font-size: 6.3rem;
+  font-size: 6.5rem;
 }
 
 .about-container .left-about p {
@@ -1137,6 +1136,12 @@ footer {
     font-size: 1.25rem;
   }
 
+  #contact .bg-text {
+    font-size: 4.5rem;
+    padding-bottom: 70px;
+    z-index: -1;
+  }
+
   .left-header {
     perspective: none;
   }
@@ -1170,8 +1175,8 @@ footer {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 99%, 68%, 0.354);
-    border-radius: 15%;
+    background-color: hsla(0, 93%, 54%, 0.219);
+    border-radius: 10%;
     animation: ripple 1s ease-in-out 0.5s;
   }
 
@@ -1368,7 +1373,6 @@ footer {
 
   .image__hero:hover {
     transition: all 1s ease-in-out;
-    border-radius: 10px;
   }
 
   .image__hero img {
@@ -1388,8 +1392,8 @@ footer {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 99%, 68%, 0.354);
-    border-radius: 15%;
+    background-color: hsla(0, 93%, 54%, 0.219);
+    border-radius: 10px;
     animation: ripple 1s ease-in-out 0.5s;
   }
 
@@ -1420,6 +1424,12 @@ footer {
     font-size: 1.5rem;
   }
 
+  #contact .bg-text {
+    font-size: 2.8rem;
+    padding-bottom: 70px;
+    z-index: -1;
+  }
+
   .image__hero {
     position: relative;
     overflow: hidden;
@@ -1448,7 +1458,7 @@ footer {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 99%, 68%, 0.354);
+    background-color: hsla(0, 93%, 54%, 0.219);
     border-radius: 15%;
     animation: ripple 1s ease-in-out 0.5s;
   }
@@ -1501,6 +1511,11 @@ footer {
     padding-top: 2rem;
   }
 
+  #contact .bg-text {
+    font-size: 3.9rem;
+    padding-bottom: 70px;
+    z-index: -1;
+  }
   .image__hero {
     position: relative;
     overflow: hidden;
@@ -1518,6 +1533,7 @@ footer {
   .image__hero:hover img {
     transform: scale(1.2);
     transition: all 1s ease-in-out 1s;
+    border-radius: 5px;
   }
 
   .image__hero:hover::after {
@@ -1528,8 +1544,8 @@ footer {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 99%, 68%, 0.354);
-    border-radius: 15%;
+    background-color: hsla(0, 93%, 54%, 0.219);
+    border-radius: 10px;
     animation: ripple 1s ease-in-out 0.5s;
   }
 }
@@ -1598,8 +1614,8 @@ footer {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: hsla(0, 99%, 68%, 0.354);
-    border-radius: 15%;
+    background-color: hsla(0, 93%, 54%, 0.219);
+    border-radius: 10px;
     animation: ripple 1s ease-in-out 0.5s;
   }
 }
