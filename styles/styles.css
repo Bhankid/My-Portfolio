@@ -1118,6 +1118,26 @@ footer {
 }
 
 @media screen and (max-width: 660px) {
+  .header {
+    width: 100%;
+  }
+  .header-content {
+    padding-inline: 10px;
+    flex-direction: column;
+  }
+  .right-header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .name {
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-align: left;
+  }
+  .bio {
+    white-space: normal;
+  }
   .blogs {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1144,9 +1164,11 @@ footer {
 
   .left-header {
     perspective: none;
+    width: 100%;
   }
 
   .image__hero {
+    width: 100%;
     position: relative;
     overflow: hidden;
     transition: transform 1s ease-in-out;
@@ -1178,6 +1200,21 @@ footer {
     background-color: hsla(0, 93%, 54%, 0.219);
     border-radius: 10%;
     animation: ripple 1s ease-in-out 0.5s;
+  }
+
+  .main-btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 500;
+    font-size: 0.7rem;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    background: transparent;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
   }
 
   @keyframes ripple {
@@ -1412,7 +1449,7 @@ footer {
 /* Additional media query for smaller mobile screens */
 @media screen and (max-width: 400px) {
   .bio {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .main-title h2 {
     font-size: 1rem;
@@ -1477,11 +1514,12 @@ footer {
 /* Media query for medium-sized screens (e.g., tablets) */
 @media screen and (max-width: 970px) {
   .container {
-    padding: 6rem 4rem;
+    width: 100%;
+    padding: 6rem 2rem;
   }
 
   .about-container .left-about {
-    padding-right: 0rem;
+    padding-right: 0;
   }
 
   .header-content {
@@ -1494,21 +1532,21 @@ footer {
   }
 
   .left-header .image {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
   }
 
   .right-header {
     grid-row: 1;
-    padding-right: 0rem;
-    width: 80%;
+    padding-right: 0;
+    width: 85%;
     margin: 0 auto;
   }
 
   .right-header .name {
-    font-size: 2.2rem;
-    text-align: center;
-    padding-top: 2rem;
+    font-size: 1rem;
+    text-align: left;
+    padding: 2rem 1rem 0 1rem;
   }
 
   #contact .bg-text {
@@ -1517,6 +1555,7 @@ footer {
     z-index: -1;
   }
   .image__hero {
+    width: 100%;
     position: relative;
     overflow: hidden;
     transition: all 1s ease-in-out;
@@ -1527,6 +1566,7 @@ footer {
   }
 
   .image__hero img {
+    width: 100%;
     transition: filter 1s ease-in-out, transform 1s ease-in-out;
   }
 
@@ -1547,6 +1587,30 @@ footer {
     background-color: hsla(0, 93%, 54%, 0.219);
     border-radius: 10px;
     animation: ripple 1s ease-in-out 0.5s;
+  }
+  .main-btn .btn-text {
+    padding: 0 1rem;
+  }
+  .main-btn .btn-icon {
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.7rem;
+  }
+  details > summary {
+    cursor: pointer;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 1s ease-in-out;
+  }
+
+  details > summary:hover {
+    padding: 1.1rem;
+    color: var(--color-secondary);
+    transition: all 1s ease-in-out;
   }
 }
 
