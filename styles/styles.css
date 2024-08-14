@@ -1613,6 +1613,17 @@ footer {
     color: var(--color-secondary);
     transition: all 1s ease-in-out;
   }
+  .controls {
+    width: 90%;
+    padding-inline: 10px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+  }
+  .controls .control i {
+  font-size: 1rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
 }
 
 /* Media query for small-sized screens (e.g., mobile phones) */
@@ -1777,11 +1788,11 @@ footer {
   display: none;
 }
 
-.dark-mode #light-mode-icon {
+.light-mode #light-mode-icon {
   display: none;
 }
 
-.dark-mode #dark-mode-icon {
+.light-mode #dark-mode-icon {
   display: block;
 }
 
