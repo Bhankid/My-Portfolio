@@ -1772,4 +1772,17 @@ footer {
 #send-btn:hover {
   background-color: hsla(0, 100%, 50%, 0.913);
 }
+
+#dark-mode-icon {
+  display: none;
+}
+
+.dark-mode #light-mode-icon {
+  display: none;
+}
+
+.dark-mode #dark-mode-icon {
+  display: block;
+}
+
 /*# sourceMappingURL=styles.css.map */

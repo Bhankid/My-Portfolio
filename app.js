@@ -12,9 +12,18 @@ const userInput = document.querySelector("#user-input");
       document.getElementById(button.dataset.id).classList.add("active");
     });
   });
+  // document.querySelector(".theme-btn").addEventListener("click", () => {
+  //   document.body.classList.toggle("light-mode");
+  // });
 
-  document.querySelector(".theme-btn").addEventListener("click", () => {
+  const themeBtn = document.querySelector(".theme-btn");
+  const lightModeIcon = document.querySelector("#light-mode-icon");
+  const darkModeIcon = document.querySelector("#dark-mode-icon");
+
+  themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
+    lightModeIcon.classList.toggle("hidden");
+    darkModeIcon.classList.toggle("hidden");
   });
 })();
 
@@ -104,7 +113,7 @@ function fetchOpenAIResponse(prompt) {
 // });
 
 // Get the h1 element
-const h1 = document.querySelector('.name');
+const h1 = document.querySelector(".name");
 
 // Create a function to type out the text
 function typeText(element) {
@@ -112,7 +121,7 @@ function typeText(element) {
   const text = element.textContent;
 
   // Empty the element
-  element.textContent = '';
+  element.textContent = "";
 
   // Create a virtual cursor
   let cursor = 0;
@@ -139,7 +148,7 @@ function typeText(element) {
 }
 
 // Call the typeText function when the document loads
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   typeText(h1);
 });
 
