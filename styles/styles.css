@@ -735,7 +735,7 @@ section {
 }
 
 .read {
-  color: var(--primary-color);
+  color: rgba(252, 84, 38, 0.758);
   transition: color 0.5s ease-in-out;
 }
 

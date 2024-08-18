@@ -152,8 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
   typeText(h1);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const currentYear = new Date().getFullYear();
-  const footer = document.querySelector("footer p");
-  footer.innerHTML = `&copy; ${currentYear} All Rights Reserved by <span>Alfred Fianyo</span>.`;
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   const currentYear = new Date().getFullYear();
+//   const footer = document.querySelector("footer p");
+//   footer.innerHTML = `&copy; ${currentYear} All Rights Reserved by <span>Alfred Fianyo</span>.`;
+// });
