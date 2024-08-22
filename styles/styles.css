@@ -937,6 +937,108 @@ section {
   padding-left: 0;
 }
 
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+.chat--tt {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chat-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* changed from center to space-between */
+  margin: 8px auto 80px auto;
+  width: 75%;
+  height: 45vh;
+  background-color: hsla(212, 27%, 34%, 0.432);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0000000e;
+  overflow-y: auto; /* added to make the chat container scrollable */
+}
+
+.chat-header {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px dashed #ee2222ed;
+}
+
+.chat-header p {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.chat-body {
+  padding: 20px;
+  flex: 1; /* added to make the chat body take up the remaining space */
+  overflow-y: auto; /* added to make the chat body scrollable */
+}
+
+.chat-messages {
+  padding: 20px;
+  border-bottom: 1px solid hsla(0, 0%, 87%, 0.176);
+}
+
+.chat-form {
+  padding: 20px;
+  background-color: #fff; /* added to separate the form from the chat body */
+  border-top: 1px solid hsla(0, 0%, 87%, 0.573);
+}
+
+#user-input {
+  width: 100%;
+  padding: 10px;
+  background-color: hsla(215, 18%, 87%, 0.692);
+  border: 1px solid hsla(0, 0%, 87%, 0.573);
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+#send-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#send-btn:hover {
+  background-color: hsla(0, 100%, 50%, 0.913);
+}
+
+#dark-mode-icon {
+  display: none;
+}
+
+.light-mode #light-mode-icon {
+  display: none;
+}
+
+.light-mode #dark-mode-icon {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
@@ -1634,6 +1736,7 @@ footer {
     color: var(--color-grey-2);
     pointer-events: none;
   }
+  
 }
 
 /* Media query for small-sized screens (e.g., mobile phones) */
@@ -1705,105 +1808,3 @@ footer {
     animation: ripple 1s ease-in-out 0.5s;
   }
 }
-
-@keyframes ripple {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.1);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.3);
-  }
-}
-
-.chat--tt {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.chat-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; /* changed from center to space-between */
-  margin: 8px auto 40px auto;
-  width: 75%;
-  height: 45vh;
-  background-color: hsla(212, 27%, 34%, 0.432);
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0000000e;
-  overflow-y: auto; /* added to make the chat container scrollable */
-}
-
-.chat-header {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px dashed #ee2222ed;
-}
-
-.chat-header p {
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.chat-body {
-  padding: 20px;
-  flex: 1; /* added to make the chat body take up the remaining space */
-  overflow-y: auto; /* added to make the chat body scrollable */
-}
-
-.chat-messages {
-  padding: 20px;
-  border-bottom: 1px solid hsla(0, 0%, 87%, 0.176);
-}
-
-.chat-form {
-  padding: 20px;
-  background-color: #fff; /* added to separate the form from the chat body */
-  border-top: 1px solid hsla(0, 0%, 87%, 0.573);
-}
-
-#user-input {
-  width: 100%;
-  padding: 10px;
-  background-color: hsla(215, 18%, 87%, 0.692);
-  border: 1px solid hsla(0, 0%, 87%, 0.573);
-  border-radius: 10px;
-  margin-bottom: 5px;
-}
-
-#send-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--color-secondary);
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-#send-btn:hover {
-  background-color: hsla(0, 100%, 50%, 0.913);
-}
-
-#dark-mode-icon {
-  display: none;
-}
-
-.light-mode #light-mode-icon {
-  display: none;
-}
-
-.light-mode #dark-mode-icon {
-  display: block;
-}
-
-/*# sourceMappingURL=styles.css.map */
