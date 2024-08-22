@@ -506,6 +506,16 @@ section {
   width: 82%;
 }
 
+.about-stats .progress-bars .progress-bar .progress-con .progress .git {
+  width: 87%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .vs {
+  width: 95%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .ij {
+  width: 92%;
+}
+
 .about-stats .progress-bars .progress-bar .progress-con .progress:hover {
   animation: pulse 2s infinite;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -1620,10 +1630,10 @@ footer {
     margin-bottom: 8px;
   }
   .controls .control i {
-  font-size: 1rem;
-  color: var(--color-grey-2);
-  pointer-events: none;
-}
+    font-size: 1rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+  }
 }
 
 /* Media query for small-sized screens (e.g., mobile phones) */
