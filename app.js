@@ -12,6 +12,7 @@ const userInput = document.querySelector("#user-input");
       document.getElementById(button.dataset.id).classList.add("active");
     });
   });
+
   // document.querySelector(".theme-btn").addEventListener("click", () => {
   //   document.body.classList.toggle("light-mode");
   // });
@@ -132,7 +133,7 @@ function typeText(element) {
     if (cursor < text.length) {
       element.textContent += text[cursor];
       cursor++;
-      setTimeout(type, 100);
+      setTimeout(type, 150);
     } else {
       // If the element has child elements, type out their text content
       if (element.children.length > 0) {
@@ -151,6 +152,46 @@ function typeText(element) {
 document.addEventListener("DOMContentLoaded", () => {
   typeText(h1);
 });
+
+
+// const imageStack = document.querySelector(".image-stack");
+// const images = imageStack.children;
+
+// let currentImage = 0;
+
+// function slideImage() {
+//   imageStack.classList.add("hide-image"); // Add the hide-image class to the image-stack element
+//   images[currentImage].classList.remove("active");
+//   currentImage = (currentImage + 1) % images.length;
+//   images[currentImage].classList.add("active");
+//   imageStack.classList.remove("hide-image"); // Remove the hide-image class from the image-stack element
+// }
+
+// setInterval(slideImage, 5000);
+
+const imageStack = document.querySelector('.image-stack');
+const images = imageStack.querySelectorAll('img');
+let currentIndex = 0;
+
+// hide all images on start
+images.forEach((img) => img.classList.add('hide-image'));
+
+// show first image after a short delay
+setTimeout(() => {
+  images[currentIndex].classList.remove('hide-image');
+  images[currentIndex].classList.add('active-image');
+}, 500);
+
+// slideshow animation
+setInterval(() => {
+  images[currentIndex].classList.remove('active-image');
+  images[currentIndex].classList.add('hide-image');
+
+  currentIndex = (currentIndex + 1) % images.length;
+
+  images[currentIndex].classList.remove('hide-image');
+  images[currentIndex].classList.add('active-image');
+}, 5000); // change image every 3 seconds
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   const currentYear = new Date().getFullYear();
