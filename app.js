@@ -17,14 +17,49 @@ const userInput = document.querySelector("#user-input");
   //   document.body.classList.toggle("light-mode");
   // });
 
+  // const themeBtn = document.querySelector(".theme-btn");
+  // const lightModeIcon = document.querySelector("#light-mode-icon");
+  // const darkModeIcon = document.querySelector("#dark-mode-icon");
+
+  // themeBtn.addEventListener("click", () => {
+  //   document.body.classList.toggle("light-mode");
+  //   lightModeIcon.classList.toggle("hidden");
+  //   darkModeIcon.classList.toggle("hidden");
+  // });
+
+  // Theme toggle logic with localStorage
   const themeBtn = document.querySelector(".theme-btn");
   const lightModeIcon = document.querySelector("#light-mode-icon");
   const darkModeIcon = document.querySelector("#dark-mode-icon");
 
+  // Check localStorage for saved theme
+  const savedTheme = localStorage.getItem("theme");
+
+  // Apply the saved theme on page load
+  if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+    lightModeIcon.classList.remove("hidden");
+    darkModeIcon.classList.add("hidden");
+  } else {
+    document.body.classList.remove("light-mode");
+    lightModeIcon.classList.add("hidden");
+    darkModeIcon.classList.remove("hidden");
+  }
+
+  // Toggle theme and save the preference in localStorage
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
-    lightModeIcon.classList.toggle("hidden");
-    darkModeIcon.classList.toggle("hidden");
+    const isLightMode = document.body.classList.contains("light-mode");
+
+    if (isLightMode) {
+      localStorage.setItem("theme", "light");
+      lightModeIcon.classList.remove("hidden");
+      darkModeIcon.classList.add("hidden");
+    } else {
+      localStorage.setItem("theme", "dark");
+      lightModeIcon.classList.add("hidden");
+      darkModeIcon.classList.remove("hidden");
+    }
   });
 })();
 
