@@ -1007,6 +1007,7 @@ section {
 }
 
 .chat--tt {
+  visibility: hidden;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1014,20 +1015,19 @@ section {
 }
 
 .chat-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; /* changed from center to space-between */
-  margin: 8px auto 80px auto;
+  visibility: hidden;
+  position: fixed;
+  bottom: -10px; /* adjust the value to your liking */
+  left: 50%;
+  transform: translateX(-50%);
   width: 75%;
-  height: 45vh;
+  height: 55vh;
   background-color: hsla(212, 27%, 34%, 0.432);
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px #0000000e;
-  overflow-y: auto; /* added to make the chat container scrollable */
+  overflow-y: auto;
 }
 
 .chat-header {
@@ -1044,7 +1044,7 @@ section {
 .chat-body {
   padding: 20px;
   flex: 1; /* added to make the chat body take up the remaining space */
-  overflow-y: auto; /* added to make the chat body scrollable */
+  /* overflow-y: auto; added to make the chat body scrollable */
 }
 
 .chat-messages {
