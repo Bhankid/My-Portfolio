@@ -445,8 +445,8 @@ section {
   position: relative;
   animation: pulse 2s infinite;
   outline: none;
-  border-radius: 2px;
-  transition: transform 0.4s ease-in-out;
+  border-radius: 5px;
+  transition: transform 0.9s ease-in-out;
 }
 
 .about-stats .progress-bars .progress-bar:hover .progress-con .progress span {
@@ -465,6 +465,7 @@ section {
   background-color: var(--color-secondary);
   transition: all 0.9s ease-in-out;
   width: 60%;
+  border-radius: 5px;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
@@ -474,40 +475,40 @@ section {
   width: 95%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 75%;
+  width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 60%;
+  width: 79%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .node {
   width: 87%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .nxt {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .TS {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .SCSS {
-  width: 78%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .SQL {
   width: 83%;
 }
+.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+  width: 78%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .TS {
+  width: 74%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .SCSS {
+  width: 79%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .SQL {
+  width: 86%;
+}
 .about-stats .progress-bars .progress-bar .progress-con .progress .jq {
-  width: 70%;
+  width: 73%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .bt {
   width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .tw {
-  width: 84%;
+  width: 87%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .jv {
-  width: 82%;
+  width: 84%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .php {
   width: 72%;
@@ -517,16 +518,26 @@ section {
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .git {
-  width: 87%;
+  width: 89%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .vs {
-  width: 95%;
+  width: 96%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .fg {
   width: 85%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .ij {
   width: 92%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .as {
+  width: 82%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .dj {
+  width: 62%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .rt {
+  width: 62%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress:hover {
