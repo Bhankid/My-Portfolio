@@ -189,6 +189,11 @@ header {
   filter: grayscale(0);
 }
 
+.name {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -267,7 +272,30 @@ section {
 .controls .active-btn i {
   color: var(--color-white);
 }
+.control {
+  position: relative;
+}
 
+.control:hover::after {
+  content: attr(data-id);
+  position: absolute;
+  background-color: transparent;
+  padding: 33px;
+  font-size: 1.2rem;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  text-transform: capitalize;
+}
+
+.control::after {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
 .theme-btn {
   top: 2%;
   right: 3%;
@@ -1041,7 +1069,7 @@ section {
   overflow-y: auto;
 }
 
-.chat-header {
+/* .chat-header {
   text-align: center;
   padding: 10px;
   border-bottom: 1px dashed #ee2222ed;
@@ -1050,7 +1078,7 @@ section {
 .chat-header p {
   font-weight: bold;
   margin-bottom: 0;
-}
+} */
 
 .chat-body {
   padding: 20px;
@@ -1313,8 +1341,10 @@ footer {
   }
   .name {
     font-size: 0.6rem;
-    font-weight: 500;
+    font-weight: 700;
     text-align: left;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #fff;
   }
   .bio {
     white-space: normal;
@@ -1613,7 +1643,6 @@ footer {
   .left-header {
     perspective: 0;
   }
-
 
   .image__hero:hover {
     transform: rotateY(0deg) translateZ(0px);
