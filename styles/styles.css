@@ -289,12 +289,20 @@ section {
   opacity: 1;
   transition: opacity 2s ease-in-out;
   text-transform: capitalize;
+  animation: fadeOut 5s forwards;
+  animation-delay: 3s;
 }
 
 .control::after {
   visibility: hidden;
   opacity: 0;
   transition: opacity 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
 .theme-btn {
   top: 2%;
@@ -1504,6 +1512,39 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .control:hover::after {
+    animation: fadeOut 3s forwards;
+    animation-delay: 3s;
+  }
+
+   .controls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: var(--color-grey-5);
+    padding-inline: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
+
+  .btn-con {
+    margin-left: 20px;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
 /* Additional media query for smaller mobile screens */
 @media screen and (max-width: 400px) {
   .bio {
@@ -1766,3 +1807,4 @@ footer {
     animation: ripple 1s ease-in-out 0.5s;
   }
 }
+
