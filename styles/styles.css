@@ -43,7 +43,6 @@ body {
   color: var(--color-white);
   scroll-behavior: smooth;
   box-sizing: border-box;
-  transition: all 2s ease-in;
 }
 
 a {
@@ -191,7 +190,7 @@ header {
 
 .name {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1.5px #916c6c;
 }
 
 @keyframes bounce {
@@ -1020,7 +1019,7 @@ section {
 .main-title h2 {
   position: relative;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
 }
 .main-title h2 span {
@@ -1031,11 +1030,10 @@ section {
   top: 50%;
   left: 50%;
   color: var(--color-grey-5);
-  transition: all 0.5s ease-in-out;
-  z-index: -1;
+  z-index: -10;
   transform: translate(-50%, -50%);
   font-weight: 800;
-  font-size: 6.5rem;
+  font-size: 7.5rem;
 }
 
 .about-container .left-about p {
@@ -1053,18 +1051,18 @@ section {
   }
 }
 
-.chat--tt {
+/* .chat--tt {
   visibility: hidden;
   display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 10px;
-}
+} */
 
-.chat-container {
+/* .chat-container {
   visibility: hidden;
   position: fixed;
-  bottom: -10px; /* adjust the value to your liking */
+  bottom: -10px; 
   left: 50%;
   transform: translateX(-50%);
   width: 75%;
@@ -1075,7 +1073,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 0 10px #0000000e;
   overflow-y: auto;
-}
+} */
 
 /* .chat-header {
   text-align: center;
@@ -1094,10 +1092,10 @@ section {
   /* overflow-y: auto; added to make the chat body scrollable */
 }
 
-.chat-messages {
+/* .chat-messages {
   padding: 20px;
   border-bottom: 1px solid hsla(0, 0%, 87%, 0.176);
-}
+} */
 
 .chat-form {
   padding: 20px;
@@ -1105,7 +1103,7 @@ section {
   border-top: 1px solid hsla(0, 0%, 87%, 0.573);
 }
 
-#user-input {
+/* #user-input {
   width: 100%;
   padding: 10px;
   background-color: hsla(215, 18%, 87%, 0.692);
@@ -1124,7 +1122,7 @@ section {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 10px;
-}
+} */
 
 #send-btn:hover {
   background-color: hsla(0, 100%, 50%, 0.913);
@@ -1142,7 +1140,6 @@ section {
   display: block;
 }
 
-/*# sourceMappingURL=styles.css.map */
 
 @media screen and (max-width: 600px) {
   header {
