@@ -700,75 +700,8 @@ section {
   }
 }
 
-// Variables
-$width: 300px;
-$background-color: #fff;
-$border-color: #ddd;
-$border-radius: 10px;
-$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-// Chat container
-.chat-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: $width;
-  background-color: $background-color;
-  padding: 20px;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-}
 
-// Chat header
-.chat-header {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-bottom: 1px solid $border-color;
 
-  p {
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-}
-
-// Chat body
-.chat-body {
-  padding: 20px;
-}
-
-// Chat messages
-.chat-messages {
-  padding: 20px;
-  border-bottom: 1px solid $border-color;
-}
-
-// Chat form
-#chat-form {
-  padding: 20px;
-}
-
-// User input
-#user-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-}
-
-// Send button
-#send-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: $border-radius;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #3e8e41;
-  }
-}
 
 @import "./media";

@@ -43,6 +43,7 @@ body {
   color: var(--color-white);
   scroll-behavior: smooth;
   box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
 }
 
 a {
@@ -1051,82 +1052,8 @@ section {
   }
 }
 
-/* .chat--tt {
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 10px;
-} */
 
-/* .chat-container {
-  visibility: hidden;
-  position: fixed;
-  bottom: -10px; 
-  left: 50%;
-  transform: translateX(-50%);
-  width: 75%;
-  height: 55vh;
-  background-color: hsla(212, 27%, 34%, 0.432);
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0000000e;
-  overflow-y: auto;
-} */
 
-/* .chat-header {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px dashed #ee2222ed;
-}
-
-.chat-header p {
-  font-weight: bold;
-  margin-bottom: 0;
-} */
-
-.chat-body {
-  padding: 20px;
-  flex: 1; /* added to make the chat body take up the remaining space */
-  /* overflow-y: auto; added to make the chat body scrollable */
-}
-
-/* .chat-messages {
-  padding: 20px;
-  border-bottom: 1px solid hsla(0, 0%, 87%, 0.176);
-} */
-
-.chat-form {
-  padding: 20px;
-  background-color: #fff; /* added to separate the form from the chat body */
-  border-top: 1px solid hsla(0, 0%, 87%, 0.573);
-}
-
-/* #user-input {
-  width: 100%;
-  padding: 10px;
-  background-color: hsla(215, 18%, 87%, 0.692);
-  border: 1px solid hsla(0, 0%, 87%, 0.573);
-  border-radius: 10px;
-  margin-bottom: 5px;
-}
-
-#send-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--color-secondary);
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 10px;
-} */
-
-#send-btn:hover {
-  background-color: hsla(0, 100%, 50%, 0.913);
-}
 
 #dark-mode-icon {
   display: none;
