@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -1273,10 +1274,8 @@ footer {
   }
   .name {
     font-size: 0.6rem;
-    font-weight: 700;
     text-align: left;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1.5px #fff;
+    
   }
   .bio {
     white-space: normal;
