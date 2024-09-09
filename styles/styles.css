@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -83,9 +86,7 @@ details > summary * {
     var(--color-secondary),
     var(--color-grey-4)
   );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: "poppins", 'sans-serif' ;
 }
 
 .typing-text:nth-child(1) {
@@ -190,8 +191,7 @@ header {
 }
 
 .name {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px #916c6c;
+  font-family: "Protest Guerrilla", sans-serif;
 }
 
 @keyframes bounce {
