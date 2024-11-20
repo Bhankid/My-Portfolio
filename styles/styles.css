@@ -515,25 +515,25 @@ section {
   width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 79%;
+  width: 89%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .node {
   width: 87%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .nxt {
-  width: 83%;
+  width: 88%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 78%;
+  width: 79%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .TS {
-  width: 74%;
+  width: 77%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .SCSS {
   width: 79%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .SQL {
-  width: 86%;
+  width: 88%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .jq {
   width: 73%;
@@ -549,6 +549,12 @@ section {
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .php {
   width: 72%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .lrvl {
+  width: 79%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .wp {
+  width: 83%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .ms {
   width: 96%;
@@ -574,7 +580,7 @@ section {
   width: 62%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .rt {
-  width: 62%;
+  width: 72%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress:hover {
