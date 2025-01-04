@@ -233,3 +233,60 @@ setInterval(() => {
 //   const footer = document.querySelector("footer p");
 //   footer.innerHTML = `&copy; ${currentYear} All Rights Reserved by <span>Alfred Fianyo</span>.`;
 // });
+
+
+// This function handles the animation of counting up from 0 to a target number
+function countUp(element, target, duration) {
+  let start = 0;
+  const end = parseInt(target);
+  // Calculate how much to increment based on the desired duration
+  const increment = Math.ceil(end / (duration / 1000));
+
+  // Create an interval that updates the count 60 times per second
+  const timer = setInterval(() => {
+    start += 1;
+    // Stop counting when target is reached
+    if (start > end) {
+      start = end;
+      clearInterval(timer);
+    }
+    // Display the current count with a plus symbol
+    element.textContent = start + "+";
+  }, 1000 / 60);
+}
+
+// This function initializes the counting animation for an element
+function startCounting(element) {
+  // Get the target number from the element's text
+  const target = parseInt(element.textContent);
+  // Set animation duration to 3.5 seconds
+  const duration = 3500;
+  // Reset count to 0 before starting
+  element.textContent = "0+";
+  // Begin the counting animation
+  countUp(element, target, duration);
+}
+
+// Configuration options for the Intersection Observer
+const options = {
+  root: null,  // Use viewport as root
+  rootMargin: "0px", // No margin around root
+  threshold: 0.1, // Trigger when 10% of element is visible
+};
+
+// Create an Intersection Observer to detect when elements enter viewport
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // When element becomes visible
+    if (entry.isIntersecting) {
+      startCounting(entry.target);
+      // Continuous observation enabled by removing unobserve
+    }
+  });
+}, options);
+
+// Select all elements with count-up class and observe them
+const countUpElements = document.querySelectorAll(".count-up");
+countUpElements.forEach((element) => {
+  observer.observe(element);
+});
