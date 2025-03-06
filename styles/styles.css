@@ -507,22 +507,22 @@ section {
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 97%;
+  width: 98%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 95%;
+  width: 98%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 90%;
+  width: 96%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 89%;
+  width: 94%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 87%;
+  width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .nxt {
-  width: 88%;
+  width: 93%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .python {
   width: 79%;
@@ -534,7 +534,10 @@ section {
   width: 79%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .SQL {
-  width: 88%;
+  width: 92%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .mg {
+  width: 89%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .jq {
   width: 73%;
@@ -543,7 +546,7 @@ section {
   width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .tw {
-  width: 87%;
+  width: 95%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .jv {
   width: 84%;
@@ -558,14 +561,14 @@ section {
   width: 83%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .ms {
-  width: 96%;
+  width: 99%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .git {
   width: 89%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .vs {
-  width: 96%;
+  width: 97%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .fg {
   width: 85%;
@@ -581,7 +584,7 @@ section {
   width: 62%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .rt {
-  width: 72%;
+  width: 82%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress:hover {
